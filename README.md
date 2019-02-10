@@ -9,7 +9,7 @@ This is a re-implementation of xv6-PDOS Operating System's Bootloader in C. The 
 An ELF header has the following important fields:
 
 * **Magic Number**. To check the integrity of ELF header block, also verfies whether the Operating system is running in correct mode.
-* **Program Header Offset** The number of bits to offset before we find the Physical Headers
+* **Program Header Offset** The number of bits to offset before we find the program headers
 * **Number of Program Headers** Total number of program headers
 
 ## Program Header ##
