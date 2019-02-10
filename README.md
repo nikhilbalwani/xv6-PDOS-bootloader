@@ -1,6 +1,12 @@
 # xv6-PDOS-bootloader #
 
-This is a re-implementation of xv6-PDOS Operating System's Bootloader in C. The code has structures for "ELF header" and "Program Header". 
+This is a re-implementation of xv6-PDOS Operating System's Bootloader in C. The complete x86-assembly and C implementation of this Operating System can be found [here](https://github.com/mit-pdos/xv6-public).
+
+## Salient features of this program include implementations of ##
+* Data structure for ELF (file format) Header.
+* Data structure for Program Header.
+* Function to access a sector with a given offset from the given address.
+* Blocking call to wait for the disk to be ready before any file operations can be performed.
 
 ## ELF Header ##
 
