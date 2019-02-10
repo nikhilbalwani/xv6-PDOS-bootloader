@@ -2,7 +2,7 @@
 
 This is a re-implementation of xv6-PDOS Operating System's Bootloader in C. The complete x86-assembly and C implementation of this Operating System can be found [here](https://github.com/mit-pdos/xv6-public).
 
-## Salient features of this program include implementations of ##
+## Salient features ##
 * Data structure for ELF (file format) Header.
 * Data structure for Program Header.
 * Function to access a sector with a given offset from the given address.
