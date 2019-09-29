@@ -118,4 +118,41 @@ void bootmain() {
     entry();
 }
 
+void waitdisk()
+{
+  // First two bits should be '01' when disk is ready
+  while( ( inb(0x1F7) & 0xC0 ) != 0x40);
+}
 
+// Read sector from disk
+void readsect(void *dst, unsigned int offset) {
+    waitdisk();
+    
+    // Format ----> outb(port number, offset)
+    
+    outb(0x1F2, 1);
+    outb(0x1F3, offset);
+    outb(0x1F4, offset >> 8);
+    outb(0x1F5, offset >> 16);
+    outb(0x1F6, (offset >> 24) | 0xE0);
+    outb(0x1F7, 0x20);
+    	
+    waitdisk();
+    
+    // Write the sector to dst
+    insl(0x1F0, dst, SECTORSIZE / 4);
+}
+
+void read_segment(unsigned char* va, unsigned int count, unsigned int offset)
+{
+  unsigned char* eva;
+
+  eva = va + count;
+
+  va -= offset % SECTORSIZE;
+
+  offset = (offset / SECTORSIZE) + 1;
+
+  for(; va < eva; va += SECTORSIZE, offset++)
+    readsect(va, offset);
+}
