@@ -1,3 +1,5 @@
+Authors:- Maharsh Suryawala, Nikhil Balwani, Parshwa Shah, Jay Patel
+
 # xv6-PDOS-bootloader #
 
 This is a re-implementation of xv6-PDOS Operating System's Bootloader in C. The complete x86-assembly and C implementation of this Operating System can be found [here](https://github.com/mit-pdos/xv6-public).
