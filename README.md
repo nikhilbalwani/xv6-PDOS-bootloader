@@ -1,4 +1,4 @@
-Authors:- Maharsh Suryawala, Nikhil Balwani, Parshwa Shah, Jay Patel
+Authors:- Maharsh Suryawala (AU1641029), Nikhil Balwani(AU1641070), Parshwa Shah (AU1641068), Jay Patel (AU1641011)
 
 # xv6-PDOS-bootloader #
 
